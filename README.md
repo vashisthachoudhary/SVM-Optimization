@@ -7,6 +7,19 @@
 - Features: 50 (reduced from 784 using PCA)
 - Classes: 10
 
+## Methodology
+In this project, we perform Support Vector Machine (SVM) optimization on the MNIST dataset. The process involves the following steps:
+- Data Preprocessing:
+  - We load the MNIST dataset using fetch_openml and sample 10,000 instances to make computation more feasible.
+  - The data is then reduced to 50 principal components (PCA) to speed up training and reduce dimensionality.
+- Data Splitting:
+  - We split the dataset into training and testing sets using a 70-30 ratio for each of 10 different samples.
+- Hyperparameter Tuning:
+  - An SVM model is optimized for each sample using a grid search over hyperparameters: C, gamma, and kernel type.
+  - The goal is to find the best-performing hyperparameter combination for each sample.
+- Model Training and Evaluation:
+  - The SVM model is trained using the optimal parameters, and performance is evaluated using accuracy, confusion matrix, and classification report.
+
 ## Optimization Results
 - Best performing sample: S3
 - Best accuracy achieved: 0.9597
